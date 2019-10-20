@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>CONSTRATOR | Create</title>
+  </head>
+  <body>
+      <div class="canvas-wrapper">
+        <img src="img/starmap2.png">
+        <canvas id="canvas"></canvas>
+      </div>
+      <form class="create-seiza">
+        <div id="msg"></div>
+        <div class="edit">
+          <textarea type="text" name="title" class="edit-input edit-title" placeholder="Title"></textarea>
+          <textarea name="description" rows="4" cols="40" placeholder="Description" class="edit-input edit-description"></textarea>
+        </div>
+          <input class="post-button" type="submit" value="Post" form="post" />
+      </form>
+      <canvas id="target" width="200" height="200" style="display:none;"></canvas>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/create.js"></script>
+  </body>
+</html>
