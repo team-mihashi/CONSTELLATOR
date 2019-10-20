@@ -72,7 +72,7 @@ const getMousePosition = (e) => {
 
 // Get points and draw canvas
 let constellations;
-getConstellations(10).then((data) => {
+getConstellations(5).then((data) => {
     constellations = data.constellations;
     data.constellations.forEach((constellation, idx) => {
         drawCanvas(constellation, colors[idx], idx);
