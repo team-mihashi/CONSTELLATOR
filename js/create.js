@@ -220,22 +220,11 @@ $(function(){
 //         return [ h, s, l ] ;
 //    }
 
-   // Post data to the api
-   function postData(name, description, lines) {
-       return new Promise((resolve, reject) => {
-           resolve($.post('https://nasa-backend.herokuapp.com/constellations', {
-           	name: name,
-           	description: description,
-           	lines: lines
-           }))
-       })
-   }
-
    $(".post-button").on('click', function (event) {
        $.post('https://nasa-backend.herokuapp.com/constellations',
        	{
             name: $('.edit-title').val(),
-            description: $('.edit-input').val(),
+            description: $('.edit-description').val(),
             lines: points2lines(points)
         }).done(() => {
             location.href="./view.html";
