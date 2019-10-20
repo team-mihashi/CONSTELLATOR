@@ -238,7 +238,7 @@ $(function(){
             description: $('.edit-input').val(),
             lines: points2lines(points)
         }).done(() => {
-            location.href="./index.html";
+            location.href="./view.html";
         }).fail((e) => {
             console.log(e);
         })
