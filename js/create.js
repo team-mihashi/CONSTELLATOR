@@ -227,7 +227,7 @@ $(function(){
             description: $('.edit-description').val(),
             lines: points2lines(points)
         }).done(() => {
-            location.href="./view.html";
+            location.href="./index.html";
         }).fail((e) => {
             console.log(e);
         })
