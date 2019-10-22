@@ -45,7 +45,6 @@ const getConstellations = (num) => {
 // Draw constellation to canvas function
 let points = [];
 const drawCanvas = (constellation, color, idx) => {
-    console.log(constellation);
     constellation.lines.forEach((line) => {
         if (!points[idx]) {
             points[idx] = [];

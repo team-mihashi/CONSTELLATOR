@@ -220,17 +220,40 @@ $(function(){
 //         return [ h, s, l ] ;
 //    }
 
-   $(".post-button").on('click', function (event) {
-       $.post('https://nasa-backend.herokuapp.com/constellations',
-       	{
-            name: $('.edit-title').val(),
-            description: $('.edit-description').val(),
-            lines: points2lines(points)
-        }).done(() => {
-            location.href="./index.html";
-        }).fail((e) => {
-            console.log(e);
-        })
+    $(".post-button").on('click', function (event) {
+        // Get values
+        const title = $('.edit-title').val();
+        const description = $('.edit-description').val();
+        
+        // Validate values
+        if (!(title && description)) {
+            alert('There is a blank field!');
+            return false;
+        }
+        if (points.length < 2) {
+            alert('The constellation is too simple!');
+            return false;
+        }
+        if (title.length < 2 || 20 < title.length) {
+            alert('The title must be between 2 and 20 characters!')
+            return false;
+        }
+        if (description.length < 2 || 100 < description.length) {
+            alert('The description must be between 2 and 100 characters!')
+            return false;
+        }
+
+        // Post to the server
+        $.post('https://nasa-backend.herokuapp.com/constellations',
+       	    {
+                name: $('.edit-title').val(),
+                description: $('.edit-description').val(),
+                lines: points2lines(points)
+            }).done(() => {
+                location.href="./index.html";
+            }).fail((e) => {
+                console.log(e);
+            })
     })
    /*     
    
