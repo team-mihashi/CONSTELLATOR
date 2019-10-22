@@ -52,6 +52,8 @@ canvas.addEventListener('click', (e) => {
         }
         descriptionStyle['min-width'] = MAX_DESCRIPTION_SIZE + 'px';
         descriptionStyle['min-height'] = MAX_DESCRIPTION_SIZE + 'px';
+        descriptionStyle['max-width'] = canvas.width;
+        descriptionStyle['max-height'] = canvas.height;
         $('.description').css(descriptionStyle);
         $('.description').append('<p>' + constellations[displayConstellationIdx].name + '</p>');
         $('.description').append('<p>' + constellations[displayConstellationIdx].description + '</p>')
