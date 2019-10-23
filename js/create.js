@@ -234,6 +234,10 @@ $(function(){
             alert('The constellation is too simple!');
             return false;
         }
+        if (points.length > 10) {
+            alert('The constellation is too complicated!');
+            return false
+        }
         if (title.length < 2 || 20 < title.length) {
             alert('The title must be between 2 and 20 characters!')
             return false;
