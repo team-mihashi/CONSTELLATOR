@@ -256,7 +256,7 @@ $(function(){
             }).done(() => {
                 location.href="./index.html";
             }).fail((e) => {
-                console.log(e);
+                alert('Failed to create constellation!');
             })
     })
    /*     
