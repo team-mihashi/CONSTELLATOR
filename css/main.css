@@ -46,14 +46,6 @@ textarea {
   transition: 0.3s;
   backdrop-filter: blur(3px);
 }
-.btn-create {
-  background-color: ;
-}
-
-.btn-view {
-  background-color:;
-}
-
 
 #particles-js {
 background-color: #232741;
@@ -71,6 +63,7 @@ z-index: -10;
 .canvas-wrapper{
   height: 100vh;
   width: 100vw;
+  background-color: black;
 }
 
 .canvas-wrapper canvas{
@@ -255,4 +248,8 @@ button, input, select, textarea {
   text-align: center;
   width: 100%;
   height: 40vh;
+}
+
+.not-display {
+  display: none;
 }

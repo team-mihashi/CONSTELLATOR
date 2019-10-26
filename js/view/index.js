@@ -15,13 +15,13 @@ if (canvas.width  != displayWidth ||
 const context = canvas.getContext("2d");
 canvas.width = $('.canvas-wrapper').width();
 canvas.height = $('.canvas-wrapper').height();
-context.fillStyle = "black";
-context.fillRect(0, 0, canvas.width, canvas.height);
 
 // Setup button
 $('.visibility-button').on('click', () => {
     $('.visibility-button i').toggleClass('fa-eye');
     $('.visibility-button i').toggleClass('fa-eye-slash');
+    $('.background-constellation').toggleClass('display');
+    $('.background-constellation').toggleClass('not-display');
 });
 
 // Setup constellations colors

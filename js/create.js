@@ -259,13 +259,5 @@ $(function(){
                 alert('Failed to create constellation!');
             })
     })
-   /*     
-   
-   */
-
-
- 
-
-
 
 });
